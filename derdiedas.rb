@@ -4,6 +4,7 @@
 # rating for each word, how good remembered it was and when it was practiced last time
 # options - a batch or whole dictionary
 
+# test words
 all_words = {
   Sonne: 'die',
   Wasser: 'das',
@@ -15,11 +16,10 @@ all_words = {
 puts "Welcome! Let's test your knowledge of German articles"
 
 puts "If you want to quit write 'quit'."
-puts "Instructions:\n1-Play\n2-Add a new word\n3-Write 'quit' if you want to quit.\n"
+puts "Instructions:\n1-Play\n2-Add new words\n3-Write 'quit' if you want to quit.\n"
 print ">"
 
 option = gets.chomp
-puts option
 
 case option
 when '1'
@@ -31,7 +31,7 @@ when '1'
     puts word
     guess = gets.chomp.downcase
     if guess == all_words[word]
-      puts "Good answer.\n---"
+      puts "Great!\n---"
     elsif guess == 'quit'
       break
     else
@@ -39,7 +39,5 @@ when '1'
     end
   end
 when '2'
-  puts 'Write your words'
-when '3'
-
+  puts 'Write your words:'
 end
