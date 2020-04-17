@@ -8,4 +8,4 @@ wasser = Word.new('das', 'Wasser')
 stern = Word.new('der', 'Stern')
 ofen = Word.new('der', 'Ofen')
 
-all_words = Word.all
+@all_words = Word.all
