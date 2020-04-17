@@ -18,7 +18,7 @@ when '1'
 
   guess = nil
   loop do
-    word = @all_words[rand(0..@all_words.count-1)]
+    word = Word.all.sample
     puts word.word
     guess = gets.chomp.downcase
     if guess == word.article
