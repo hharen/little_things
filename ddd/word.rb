@@ -3,17 +3,17 @@ require 'set'
 class Word
   attr_reader :word, :article
 
-  @@all = []
+  @@all_words = []
 
   def initialize(article, word)
     @article = article
     @word = word
     @rating = 0
-    @@all << self
+    @@all_words << self
   end
 
   def self.all
-    @@all
+    @@all_words
   end
 
   def to_s

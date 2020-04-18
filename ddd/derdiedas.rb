@@ -12,6 +12,9 @@ puts "Welcome! Let's test your knowledge of German articles\n"
 puts "Instructions:\n1-Play\n2-Add new words\n3-Write 'quit' if you want to quit.\n"
 print ">"
 
+
+@all_words = Word.all
+
 option = gets.chomp
 
 case option
@@ -20,7 +23,7 @@ when '1'
 
   guess = nil
   loop do
-    word = Word.all.sample
+    word = @all_words.sample
     puts word.word
     guess = gets.chomp.downcase
     if guess == word.article
@@ -33,6 +36,7 @@ when '1'
   end
 when '2'
   puts 'Write your words:'
+
   loop do
     new_word = gets.chomp
     if match = new_word.match(WORD_PATTERN)
