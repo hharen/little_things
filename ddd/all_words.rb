@@ -8,3 +8,4 @@ Word.new('das', 'Kind')
 Word.new('das', 'Wasser')
 Word.new('der', 'Stern')
 Word.new('der', 'Ofen')
+

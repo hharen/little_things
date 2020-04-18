@@ -6,6 +6,8 @@
 require_relative 'word'
 require_relative 'all_words'
 
+WORD_PATTERN = /(?<article>d(ie|er|as))\s(?<word>\w*)/
+
 puts "Welcome! Let's test your knowledge of German articles\n"
 puts "Instructions:\n1-Play\n2-Add new words\n3-Write 'quit' if you want to quit.\n"
 print ">"
@@ -30,5 +32,16 @@ when '1'
     end
   end
 when '2'
-  puts 'Write your words: (this needs to be implemented)'
+  puts 'Write your words:'
+  loop do
+    new_word = gets.chomp
+    if match = new_word.match(WORD_PATTERN)
+      new_word_article, new_word_base = match.captures
+      Word.new(new_word_article, new_word_base) #this works just the word is lost after leaving the app
+    elsif new_word == 'quit'
+      break
+    else
+      puts "Sorry, I can't understand the word. Please write an article and the noun."
+    end
+  end
 end
