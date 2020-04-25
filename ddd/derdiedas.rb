@@ -20,7 +20,7 @@ when '1'
 
   guess = nil
   loop do
-    word = @@all_words.sample
+    word = @all_words.sample
     puts word.word
     guess = gets.chomp.downcase
     if guess == word.article

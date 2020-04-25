@@ -1,7 +1,5 @@
 require_relative 'set_of_words'
 
-@@all_words = SetOfWords.new('All words')
-
 class Word
   attr_reader :word, :article
 
@@ -9,7 +7,6 @@ class Word
     @article = article
     @word = word
     @rating = 0
-    @@all_words.add_word(self)
   end
 
   def to_s

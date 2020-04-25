@@ -1,10 +1,13 @@
 require_relative 'word'
+require_relative 'set_of_words'
+
+@all_words = SetOfWords.new('All words')
 
 # these are test words for now
-Word.new('die', 'Wolke')
-Word.new('die', 'Sonne')
-Word.new('die', 'Katze')
-Word.new('das', 'Kind')
-Word.new('das', 'Wasser')
-Word.new('der', 'Stern')
-Word.new('der', 'Ofen')
+@all_words.add_word(Word.new('die', 'Wolke'))
+@all_words.add_word(Word.new('die', 'Sonne'))
+@all_words.add_word(Word.new('die', 'Katze'))
+@all_words.add_word(Word.new('das', 'Kind'))
+@all_words.add_word(Word.new('das', 'Wasser'))
+@all_words.add_word(Word.new('der', 'Stern'))
+@all_words.add_word(Word.new('der', 'Ofen'))

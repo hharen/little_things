@@ -15,6 +15,6 @@ class SetOfWords
   end
 
   def sample
-    @words[rand(0..@words.length - 1)]
+    @words.sample
   end
 end
